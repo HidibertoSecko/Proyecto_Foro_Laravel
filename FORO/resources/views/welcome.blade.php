@@ -8,8 +8,8 @@
     
 </head>
 <body>
+  <br><br><br>
     <header id="inicio" class="">
-    
     <svg viewbox="0 0 100 20">
     <defs>
         <linearGradient id="gradient" x1="0" x2="0" y1="0" y2="1">
@@ -41,12 +41,12 @@
         <form action="login" method="post" accept-charset="utf-8">
             <input type="text" name="usuario" id="usuario" placeholder="Nombre de usuario"><br><br>
             <input type="password" name="pass" id="pass" placeholder="Contraseña"><br><br>
-            <input type="submit" name="" value="Entrar"><br><br>
+            <input type="submit" name="" value="ENTRAR A FORO"><br><br>
         </form>
     </section>
     <section id="registrarse" align="center">
               <a href="/registrarse" title="Registrarse">
-                  <input type="button" name="registrarse" value="Registrarse" >
+                  <input type="button" name="registrarse" value="REGISTRARSE" >
               </a>
     </section>
 </body>
