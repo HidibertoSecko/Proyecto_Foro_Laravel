@@ -18,8 +18,8 @@ class CreateTemasTable extends Migration
             $table->String('categoria',100);
             $table->String('title_tema',200);
             $table->text('tema');
-            $table->integer('usuario_id')->unsigned()->nullable(false);
-            $table->foreign('usuario_id')->references('id')->on('users');
+            $table->integer('id_usuario')->unsigned()->nullable(false);
+            $table->foreign('id_usuario')->references('id')->on('users');
             $table->timestamps();
         });
     }
