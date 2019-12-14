@@ -1,95 +1,53 @@
-<!doctype html>
-<html lang="{{ app()->getLocale() }}">
-    <head>
-        <meta charset="utf-8">
-        <meta http-equiv="X-UA-Compatible" content="IE=edge">
-        <meta name="viewport" content="width=device-width, initial-scale=1">
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <title>Foro</title>
+    <link rel="stylesheet"  href="css/estilo.css">
+    
+</head>
+<body>
+    <header id="inicio" class="">
+    
+    <svg viewbox="0 0 100 20">
+    <defs>
+        <linearGradient id="gradient" x1="0" x2="0" y1="0" y2="1">
+             <stop offset="5%" stop-color="white"/>
+            <stop offset="95%" stop-color="#white"/>
+        </linearGradient>
+    <pattern id="wave" x="0" y="0" width="120" height="20" patternUnits="userSpaceOnUse">
+      <path id="wavePath" d="M-40 9 Q-30 7 -20 9 T0 9 T20 9 T40 9 T60 9 T80 9 T100 9 T120 9 V20 H-40z" mask="url(#mask)" fill="url(#gradient)"> 
+        <animateTransform
+            attributeName="transform"
+            begin="0s"
+            dur="1.5s"
+            type="translate"
+            from="0,0"
+            to="40,0"
+            repeatCount="indefinite" />
+      </path>
+    </pattern>
+  </defs>
+  <text text-anchor="middle" x="60" y="15" font-size="17" fill="url(#wave)"  fill-opacity="0.6">FORUM</text>
+  <text text-anchor="middle" x="60" y="15" font-size="17" fill="url(#gradient)" fill-opacity="0.2">FORUM</text>
+</svg>
 
-        <title>Laravel</title>
-
-        <!-- Fonts -->
-        <link href="https://fonts.googleapis.com/css?family=Raleway:100,600" rel="stylesheet" type="text/css">
-
-        <!-- Styles -->
-        <style>
-            html, body {
-                background-color: #fff;
-                color: #636b6f;
-                font-family: 'Raleway', sans-serif;
-                font-weight: 100;
-                height: 100vh;
-                margin: 0;
-            }
-
-            .full-height {
-                height: 100vh;
-            }
-
-            .flex-center {
-                align-items: center;
-                display: flex;
-                justify-content: center;
-            }
-
-            .position-ref {
-                position: relative;
-            }
-
-            .top-right {
-                position: absolute;
-                right: 10px;
-                top: 18px;
-            }
-
-            .content {
-                text-align: center;
-            }
-
-            .title {
-                font-size: 84px;
-            }
-
-            .links > a {
-                color: #636b6f;
-                padding: 0 25px;
-                font-size: 12px;
-                font-weight: 600;
-                letter-spacing: .1rem;
-                text-decoration: none;
-                text-transform: uppercase;
-            }
-
-            .m-b-md {
-                margin-bottom: 30px;
-            }
-        </style>
-    </head>
-    <body>
-        <div class="flex-center position-ref full-height">
-            @if (Route::has('login'))
-                <div class="top-right links">
-                    @auth
-                        <a href="{{ url('/home') }}">Home</a>
-                    @else
-                        <a href="{{ route('login') }}">Login</a>
-                        <a href="{{ route('register') }}">Register</a>
-                    @endauth
-                </div>
-            @endif
-
-            <div class="content">
-                <div class="title m-b-md">
-                    Laravel
-                </div>
-
-                <div class="links">
-                    <a href="https://laravel.com/docs">Documentation</a>
-                    <a href="https://laracasts.com">Laracasts</a>
-                    <a href="https://laravel-news.com">News</a>
-                    <a href="https://forge.laravel.com">Forge</a>
-                    <a href="https://github.com/laravel/laravel">GitHub</a>
-                </div>
-            </div>
-        </div>
-    </body>
+        <marquee  SCROLLAMOUNT=20 ALIGN=BOTTOM>
+            <h2 align="center">Conversa sobre cualquier tema que quieras</h2>
+        </marquee>
+    </header><!-- /header -->
+    <section id="login" align="center">
+        <form action="login" method="post" accept-charset="utf-8">
+            <input type="text" name="usuario" id="usuario" placeholder="Nombre de usuario"><br><br>
+            <input type="password" name="pass" id="pass" placeholder="Contraseña"><br><br>
+            <input type="submit" name="" value="Entrar"><br><br>
+        </form>
+    </section>
+    <section id="registrarse" align="center">
+              <a href="/registrarse" title="Registrarse">
+                  <input type="button" name="registrarse" value="Registrarse" >
+              </a>
+    </section>
+</body>
 </html>

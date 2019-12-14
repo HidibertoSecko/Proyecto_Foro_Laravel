@@ -18,3 +18,14 @@ Route::get('/', function () {
 Auth::routes();
 
 Route::get('/home', 'HomeController@index')->name('home');
+
+Route::get('/registrarse', function(){
+	return view('registrarse');
+});
+
+Route::post('/registrarse', function(){
+	$usuario = Input::get('usuario');
+	$password= Input::get('password');
+
+	echo $usuario."-".$password;
+});

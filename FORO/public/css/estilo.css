@@ -1,0 +1,36 @@
+
+body{
+	background-image: url(../img/definitivo.jpg);
+	background-size:cover;
+  font-family: 'Cabin Condensed', sans-serif;
+  display:flex;
+  flex-direction:column;
+  justify-content:center;
+  align-items:center;
+}
+svg{font-weight:bold;max-width:600px;height:auto;}
+
+h1{
+	color: white;
+	border-color:#71BD9F;
+	text-shadow: 5px 7px #682626;
+	font-family: Lucida Handwriting; 
+	font-size: 600%;
+	border-collapse: 23dp;
+}
+h2{
+	color:#71BD9F;
+	border-color: white;
+	font-size: 250%;
+	font-family: monospace; 
+	
+}
+input{
+	text-shadow: 1px 2px #999;
+	font-size: 180%;
+	text-decoration-color: white;
+	color: white;
+	font-family: MV Boli;
+	background: transparent;
+	text-align: center;
+}
