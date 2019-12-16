@@ -44,7 +44,7 @@
         {{Form::open(['route'=>'foro.crear', 'method'=>'post'])}}
 
        
-        <h3>Titulo : {{Form::text('title_tema', ' ',['placeholder'=>'titulo'])}}</h3><br><br>
+        <h3 >Titulo : {{Form::text('title_tema', ' ',['placeholder'=>'titulo'])}}</h3><br><br>
 
         {{Form::textarea('tema','',['require'=>'true', 'placeholder'=>'tema'])}}<br><br>
 

@@ -1,12 +1,10 @@
 <?php
 
 namespace App\Http\Controllers;
-use App\Tema;
-use App\Opinion;
-use App\User;
+
 use Illuminate\Http\Request;
 
-class ForoController extends Controller
+class LoginController extends Controller
 {
     /**
      * Display a listing of the resource.
@@ -15,10 +13,7 @@ class ForoController extends Controller
      */
     public function index()
     {
-        $user = User::all('nombre_usuario');
-        $tema = Tema::all();
-        (compact('user','tema'));
-        return view('foro.foro', compact('user','tema'));
+        //
     }
 
     /**
@@ -28,7 +23,7 @@ class ForoController extends Controller
      */
     public function create()
     {
-        return view('foro.tema');
+        //
     }
 
     /**
@@ -39,13 +34,7 @@ class ForoController extends Controller
      */
     public function store(Request $request)
     {
-         $p = new Tema;
-        $p->title_tema = $request["title_tema"];
-        $p->tema =  $request["tema"];
-        $p->usuario_id=$request["usuario_id"];
-        $p->fecha=date('Y-m-d H:i:s');
-        $p->save();
-        return redirect('foro');
+        //
     }
 
     /**

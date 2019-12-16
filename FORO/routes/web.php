@@ -11,12 +11,9 @@
 |
 */
 
-Route::get('/', function () {
-    return view('welcome');
-});
 
 
-Route::get('login', 'UserController@index');
+Route::get('/', 'UserController@index');
 Route::get('user/nuevo', 'UserController@create')->name('user.nuevo');
 Route::post('user/crear' , 'UserController@store')->name('user.crear');
 

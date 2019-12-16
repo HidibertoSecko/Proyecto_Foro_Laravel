@@ -16,6 +16,7 @@ class OpinionTableSeeder extends Seeder
        			'texto'		=>'Laravel es una buena herramienta para realizar proyectos de ese tipo',
        			'usuario_id'	=> 1,
        			'temas_id'		=> 1,
+            'fecha'       => date('Y-m-d H:i:s'),
        			'created_at' 	=> date('Y-m-d H:i:s'),
 				    'updated_at' 	=> date('Y-m-d H:i:s'),
        		]

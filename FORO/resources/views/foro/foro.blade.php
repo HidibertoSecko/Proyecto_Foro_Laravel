@@ -42,32 +42,32 @@
             <br><br>
   </header><!-- /header -->
 
-<table border="3" width="60%" align="center">
+<table border="3" width="80%" align="center">
    <thead>
         <tr>
           <th>Puedes responder a cualquier tema </th>
         </tr>
       </thead>
-  <tbody>
+  <tbody></wbr>>
+    
   @foreach($tema as $tema)
     <tr>
-      <table border="2" width="60%" align="center">
+      <table border="2" width="80%" align="center">
         <thead>
           <tr>
-            <th width="10%">{{ $tema -> usuario_id }}</th>
-            <th align="left">{{ $tema -> title_tema }}</th>
+            <th width="2%" ><img src="../img/user.jpg" height="10%"></th>
+            <th align="left" >Tema : {{ $tema -> title_tema }}</th>
+            <td width="12%" align="center">{{ $tema -> fecha}}</td>
           </tr>
         </thead>
         <tbody>
           <tr>
-            <td colspan="2">{{ $tema ->tema }}</td>
-          </tr>
-          <tr>
-            <td colspan="2" align="center">
+            <td colspan="2" style="background-color: white; color: black">{{ $tema ->tema }}</td>
+            <td align="center" width="10%" style="background-color: rgba(32,2,12, .5);">
               <a href="respuesta" title="">
-                  <input type="button" name="registrarse" value="respuestas" >
+                  <p style="color: white">Ir a Respuestas</p>
               </a>
-            </td>  
+            </td>
           </tr>
         </tbody>
       </table>

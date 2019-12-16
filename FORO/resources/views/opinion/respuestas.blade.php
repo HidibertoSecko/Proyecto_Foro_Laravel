@@ -42,20 +42,21 @@
             <br><br>
   </header><!-- /header -->
 
-<table border="3" width="60%" align="center">
+<table border="3" width="80%" align="center">
   <tbody>
   @foreach($opinion as $opinion)
     <tr>
-      <table border="2" width="60%" align="center">
+      <table border="2" width="80%" align="center">
         <thead>
           <tr>
-            <th width="10%">{{ $opinion -> usuario_id }}</th>
+           <th width="2%" ><img src="../img/user.jpg" height="10%"></th>
             <th align="left">nombre de usuario</th>
+            <td align="center" width="12%">{{$opinion -> fecha}}</td>
           </tr>
         </thead>
         <tbody>
           <tr>
-            <td colspan="2">{{ $opinion ->texto }}</td>
+            <td colspan="3" style="background-color: white; color: black">{{ $opinion ->texto }}</td>
           </tr>
         </tbody>
       </table>

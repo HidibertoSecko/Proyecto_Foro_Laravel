@@ -41,6 +41,7 @@ class OpinionController extends Controller
         $p->texto = $request["texto"];
         $p->usuario_id =  $request["usuario_id"];
         $p->temas_id= $request["temas_id"];
+        $p->fecha=date('Y-m-d H:i:s');
         $p->save();
         return redirect('respuesta');
     }

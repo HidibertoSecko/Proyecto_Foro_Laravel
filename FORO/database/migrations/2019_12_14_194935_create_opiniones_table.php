@@ -17,7 +17,7 @@ class CreateOpinionesTable extends Migration
 
             $table->increments('id');
             $table->text('texto');
-            
+            $table->dateTime('fecha');
             $table->integer('usuario_id')->unsigned()->nullable(false);
             $table->foreign('usuario_id')->references('id')->on('users');
 

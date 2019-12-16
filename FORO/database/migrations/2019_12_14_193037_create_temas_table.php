@@ -17,6 +17,7 @@ class CreateTemasTable extends Migration
             $table->increments('id');
             $table->String('title_tema');
             $table->text('tema');
+            $table->dateTime('fecha');
             $table->integer('usuario_id')->unsigned()->nullable(false);
             $table->foreign('usuario_id')->references('id')->on('users');
             $table->timestamps();
