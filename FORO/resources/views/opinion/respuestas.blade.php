@@ -29,45 +29,33 @@
           </path>
         </pattern>
       </defs>
-          <text text-anchor="middle" x="60" y="15" font-size="17" fill="url(#wave)"  fill-opacity="0.6">FORO</text>
-          <text text-anchor="middle" x="60" y="15" font-size="17" fill="url(#gradient)" fill-opacity="0.2">FORO</text>
+          <text text-anchor="middle" x="50" y="15" font-size="15" fill="url(#wave)"  fill-opacity="0.6">RESPUESTAS</text>
+          <text text-anchor="middle" x="50" y="15" font-size="15" fill="url(#gradient)" fill-opacity="0.2">RESPUESTAS</text>
     </svg>
-            <input type="button" name="" value="Comenta que tema quieres Discutir">
-            <input type="button" name="" value=":">
-            <a href="/tema" title="">
-                  <input type="button" name="" value="Comentar nuevo tema" >
-              </a>
-          
             
+            <a href="{{route('opinion.nuevaopinion')}}"" title="">
+                  <input type="button" name="" value="Comentar" >
+            </a>
+             <a href="foro" title="">
+                  <input type="button" name="" value="Ver Temas" >
+            </a>
             <br><br>
   </header><!-- /header -->
 
 <table border="3" width="60%" align="center">
-   <thead>
-        <tr>
-          <th>Puedes responder a cualquier tema </th>
-        </tr>
-      </thead>
   <tbody>
-  @foreach($tema as $tema)
+  @foreach($opinion as $opinion)
     <tr>
       <table border="2" width="60%" align="center">
         <thead>
           <tr>
-            <th width="10%">{{ $tema -> usuario_id }}</th>
-            <th align="left">{{ $tema -> title_tema }}</th>
+            <th width="10%">{{ $opinion -> usuario_id }}</th>
+            <th align="left">nombre de usuario</th>
           </tr>
         </thead>
         <tbody>
           <tr>
-            <td colspan="2">{{ $tema ->tema }}</td>
-          </tr>
-          <tr>
-            <td colspan="2" align="center">
-              <a href="respuesta" title="">
-                  <input type="button" name="registrarse" value="respuestas" >
-              </a>
-            </td>  
+            <td colspan="2">{{ $opinion ->texto }}</td>
           </tr>
         </tbody>
       </table>

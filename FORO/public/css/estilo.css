@@ -2,13 +2,14 @@
 body{
 	background-image: url(../img/madera.jpg);
 	background-size:cover;
-  font-family: 'Cabin Condensed', sans-serif;
-  display:flex;
-  flex-direction:column;
-  justify-content:center;
-  align-items:center;
+ 	font-family: 'Cabin Condensed', sans-serif;
+  	display:flex;
+  	flex-direction:column;
+  	justify-content:center;
+  	align-items:center;
 }
-svg{font-weight:bold;max-width:600px;height:auto;}
+
+svg{font-weight:bold;max-width:800px;height:auto;}
 
 h1{
 	color: white;
@@ -41,10 +42,12 @@ table{
 	color: white;
 	font-family: MV Boli;
 	background: transparent;
+	background: rgba(5, 35, 43, .5);
 	
 }
 h3{
 	color:yellow;
 	border-color: white;
 	font-size: 250%;
-	font-family: verdana;
+	font-family: verdana;}
+

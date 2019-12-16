@@ -24,6 +24,7 @@ Route::get('foro', 'ForoController@index');
 Route::get('tema', 'ForoController@create')->name('foro.tema');
 Route::post('tema/crear' , 'ForoController@store')->name('foro.crear');
 
-Route::get('opinion/nuevo', 'OpinionController@create')->name('opinion.nuevo');
+Route::get('opinion/nuevo', 'OpinionController@create')->name('opinion.nuevaopinion');
 Route::post('opinion/crear' , 'OpinionController@store')->name('opinion.crear');
+Route::get('respuesta', 'OpinionController@index');
 

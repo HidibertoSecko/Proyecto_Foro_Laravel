@@ -1,6 +1,3 @@
-
-<!DOCTYPE html>
-
 <!DOCTYPE html>
 <html>
 <head>
@@ -33,16 +30,27 @@
       </path>
     </pattern>
   </defs>
-  <text text-anchor="middle" x="70" y="15" font-size="17" fill="url(#wave)"  fill-opacity="0.6">REGISTRO</text>
-  <text text-anchor="middle" x="70" y="15" font-size="17" fill="url(#gradient)" fill-opacity="0.2">REGISTRO</text>
+  <text text-anchor="middle" x="63" y="15" font-size="5" fill="url(#gradient)"  fill-opacity="0.6">COMENTAR</text>
+  <text text-anchor="middle" x="63" y="15" font-size="5" fill="url(#gradient)" fill-opacity="0.2">COMENTAR</text>
 </svg>
             <h2 align="center">Conversa sobre cualquier tema que quieras</h2>
     </header><!-- /header -->
 
+    <section id="login" align="center">
+        {{Form::open(['route'=>'opinion.crear', 'method'=>'post'])}}
 
+        {{Form::textarea('texto','',['require'=>'true', 'placeholder'=>'texto'])}}<br><br>
 
+        {{Form::number('usuario_id','',['require'=>'true', 'placeholder'=>'id de usuario'])}}<br><br>
+        
+        {{Form::number('temas_id','',['require'=>'true', 'placeholder'=>'id de tema'])}}<br><br>
 
+        <br><br>
 
-   
+        {{Form::submit('Guardar')}}
+        {{Form::reset('Cancelar')}}
+
+        {{Form::close() }}
+    </section>
 </body>
 </html>

@@ -15,8 +15,8 @@ class OpinionController extends Controller
      */
     public function index()
     {
-        $Opiniones = Opinion::all();
-        return view('')->with('user', $users);
+        $opinion = Opinion::all();
+        return view('opinion.respuestas')->with('opinion', $opinion);
     }
 
     /**
@@ -26,7 +26,7 @@ class OpinionController extends Controller
      */
     public function create()
     {
-        return view('opinion.nuevo');
+        return view('opinion.nuevaopinion');
     }
 
     /**
@@ -42,7 +42,7 @@ class OpinionController extends Controller
         $p->usuario_id =  $request["usuario_id"];
         $p->temas_id= $request["temas_id"];
         $p->save();
-        return redirect('foro');
+        return redirect('respuesta');
     }
 
     /**
