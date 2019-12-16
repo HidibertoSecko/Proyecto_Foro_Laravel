@@ -10,13 +10,14 @@
 <body>
   <br><br><br>
     <header id="inicio" class="">
-    <svg viewbox="0 0 100 20">
+    
+    <svg viewbox="10 -5 105 20">
     <defs>
         <linearGradient id="gradient" x1="0" x2="0" y1="0" y2="1">
              <stop offset="5%" stop-color="white"/>
             <stop offset="95%" stop-color="#white"/>
         </linearGradient>
-    <pattern id="wave" x="0" y="0" width="120" height="20" patternUnits="userSpaceOnUse">
+    <pattern id="wave" x="0" y="0" width="250" height="20" patternUnits="userSpaceOnUse">
       <path id="wavePath" d="M-40 9 Q-30 7 -20 9 T0 9 T20 9 T40 9 T60 9 T80 9 T100 9 T120 9 V20 H-40z" mask="url(#mask)" fill="url(#gradient)"> 
         <animateTransform
             attributeName="transform"
@@ -29,25 +30,32 @@
       </path>
     </pattern>
   </defs>
-  <text text-anchor="middle" x="60" y="15" font-size="17" fill="url(#wave)"  fill-opacity="0.6">FORUM</text>
-  <text text-anchor="middle" x="60" y="15" font-size="17" fill="url(#gradient)" fill-opacity="0.2">FORUM</text>
+  <text text-anchor="middle" x="70" y="15" font-size="17" fill="url(#wave)"  fill-opacity="0.6">REGISTRO</text>
+  <text text-anchor="middle" x="70" y="15" font-size="17" fill="url(#gradient)" fill-opacity="0.2">REGISTRO</text>
 </svg>
-
-        <marquee  SCROLLAMOUNT=20 ALIGN=BOTTOM>
             <h2 align="center">Conversa sobre cualquier tema que quieras</h2>
-        </marquee>
     </header><!-- /header -->
+
+
+
+
+
     <section id="login" align="center">
-        <form action="login" method="post" accept-charset="utf-8">
-            <input type="text" name="usuario" id="usuario" placeholder="Nombre de usuario"><br><br>
-            <input type="password" name="pass" id="pass" placeholder="Contraseña"><br><br>
-            <input type="submit" name="" value="ENTRAR A FORO"><br><br>
-        </form>
-    </section>
-    <section id="registrarse" align="center">
-              <a href="{{route('registrarse')}} title="Registrarse">
-                  <input type="button" name="registrarse" value="REGISTRARSE" >
-              </a>
+        {{Form::open(['route'=>'user.crear', 'method'=>'post'])}}
+
+       
+        {{Form::text('nombre_usuario', ' ',['placeholder'=>'Nombre de Usuario'])}}<br><br>
+
+        {{Form::email('email','',['require'=>'true', 'placeholder'=>'Correo'])}}<br><br>
+
+        {{Form::password('password',['class' =>'awesome','placeholder'=>'Contraseña'])}}
+        <br><br>
+
+
+        {{Form::submit('Guardar')}}
+        {{Form::reset('Cancelar')}}
+
+        {{Form::close() }}
     </section>
 </body>
 </html>

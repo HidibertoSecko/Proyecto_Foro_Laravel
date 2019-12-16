@@ -15,17 +15,15 @@ Route::get('/', function () {
     return view('welcome');
 });
 
-Auth::routes();
 
-Route::get('/home', 'HomeController@index')->name('home');
+Route::get('login', 'UserController@index');
+Route::get('user/nuevo', 'UserController@create')->name('user.nuevo');
+Route::post('user/crear' , 'UserController@store')->name('user.crear');
 
-Route::get('/registrarse', function(){
-	return view('registrarse');
-});
+Route::get('foro', 'ForoController@index');
+Route::get('tema', 'ForoController@create')->name('foro.tema');
+Route::post('tema/crear' , 'ForoController@store')->name('foro.crear');
 
-Route::post('/registrarse', function(){
-	$usuario = Input::get('usuario');
-	$password= Input::get('password');
+Route::get('opinion/nuevo', 'OpinionController@create')->name('opinion.nuevo');
+Route::post('opinion/crear' , 'OpinionController@store')->name('opinion.crear');
 
-	echo $usuario."-".$password;
-});

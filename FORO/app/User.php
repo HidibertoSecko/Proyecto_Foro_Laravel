@@ -10,40 +10,16 @@ use App\Opinion;
 
 class User extends Authenticatable
 {
-    use Notifiable;
-
-    /**
-     * The attributes that are mass assignable.
-     *
-     * @var array
-     */
-    protected $fillable = [
-        'name', 'email', 'password',
-    ];
-
-    /**
-     * The attributes that should be hidden for arrays.
-     *
-     * @var array
-     */
-    protected $hidden = [
-        'password', 'remember_token',
-    ];
-
     protected $table = 'users';
-    //////////////// de regreso
-    public function persona()
+
+    public function tema()
     {
-        return $this->belongsTo(Persona::class);
+        return $this->hasOne(Tema::class);
     }
-    ////////////////// ida
-    public function temas()
-    {
-        return $this->hasMany(Tema::class);
-    }
-    //////////////////
+  
     public function opiniones()
     {
         return $this->hasMany(Opinion::class);
     }
+
 }

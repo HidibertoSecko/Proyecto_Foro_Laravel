@@ -13,12 +13,12 @@ class TemaTableSeeder extends Seeder
     {
         DB::table('temas')->insert(
        		[
-       			'categoria'		=>'Tecnologia',
        			'title_tema'	=>'Laravel',
-       			'tema'			=>'Proyecto de forum con laravel',
-       			'id_usuario'	=> 1,
+       			'tema'			  =>'Proyecto de forum con laravel',
+       			'usuario_id'	=> 1,
+
        			'created_at' 	=> date('Y-m-d H:i:s'),
-				'updated_at' 	=> date('Y-m-d H:i:s'),
+				    'updated_at' 	=> date('Y-m-d H:i:s'),
        		]
        );
     }

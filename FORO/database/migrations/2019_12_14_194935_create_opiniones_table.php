@@ -14,13 +14,15 @@ class CreateOpinionesTable extends Migration
     public function up()
     {
         Schema::create('opiniones', function (Blueprint $table) {
+
             $table->increments('id');
-            $table->String('categoria',100);
-            $table->text('opiniones');
+            $table->text('texto');
+            
             $table->integer('usuario_id')->unsigned()->nullable(false);
-            $table->integer('temas_id')->unsigned()->nullable(false);
             $table->foreign('usuario_id')->references('id')->on('users');
-             $table->foreign('temas_id')->references('id')->on('temas');
+
+            $table->integer('temas_id')->unsigned()->nullable(false);
+            $table->foreign('temas_id')->references('id')->on('temas');
             $table->timestamps();
         });
     }

@@ -40,12 +40,14 @@
     <section id="login" align="center">
         <form action="login" method="post" accept-charset="utf-8">
             <input type="text" name="usuario" id="usuario" placeholder="Nombre de usuario"><br><br>
-            <input type="password" name="pass" id="pass" placeholder="Contraseña"><br><br>
-            <input type="submit" name="" value="ENTRAR A FORO"><br><br>
+            <input type="password" name="pass" id="pass" placeholder="Contraseña"><br><br><br>
+             <a href="/foro" title="entrar">
+                  <input type="button" name="entrar" value="Entrar a Foro" >
+              </a><br><br>
         </form>
     </section>
     <section id="registrarse" align="center">
-              <a href="{{route('registrarse')}} title="Registrarse">
+              <a href="{{route('user.nuevo')}}" title="Registrarse">
                   <input type="button" name="registrarse" value="REGISTRARSE" >
               </a>
     </section>
